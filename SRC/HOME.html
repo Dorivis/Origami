@@ -26,7 +26,7 @@
     <div ng-controller="MenuController as menu" ng-cloak >
       <md-toolbar class="md-accent">
         <div class="md-toolbar-tools" style="background-color: #1BCF99; color: black;">
-          <img src="ic_help_white_2x.png"  style="position:absolute;width:25px;height:25px; right: 15;">
+          <img src="IMAGENS/ic_help_white_2x.png"  style="position:absolute;width:25px;height:25px; right: 15;">
            <font size="4" style="margin-left: 35%; color: white;" ng-show="menu.currentNavItem == 'Contrato'" >Contratos</font>
            <font size="4" style="margin-left: 0; color: white" ng-show="menu.currentNavItem == 'financas'" >Finanças</font>
            <font size="4" style="margin-left: 0; color: white" ng-show="menu.currentNavItem == 'prodServ'" >Produto e Serviço</font>
@@ -35,11 +35,11 @@
       </md-toolbar>
       <div ng-show="menu.currentNavItem == 'home'">
         <br>
-          <img src="checklist.png"  style="left: 15;"><font size="5" style="position:absolute;margin-left: 15px;top:130">38%</font><br>
+          <img src="IMAGENS/checklist.png"  style="left: 15;"><font size="5" style="position:absolute;margin-left: 15px;top:130">38%</font><br>
          <font size="5" style="margin-left: 15px;">Contratos</font> <br><br><br>
-         <img src="strategy.png"  style="left: 45; width: 120"><font size="5" style="position:absolute;margin-left: 35px;top:300">70%</font><br>
+         <img src="IMAGENS/strategy.png"  style="left: 45; width: 120"><font size="5" style="position:absolute;margin-left: 35px;top:300">70%</font><br>
          <font size="5" style="margin-left: 15px;">Metas</font><br><br>
-         <img src="payment-method.png"  style="left: 45; width: 100"><font size="5" style="position:absolute;margin-left: 35px;top:450">{{limite}}</font><br>
+         <img src="IMAGENS/payment-method.png"  style="left: 45; width: 100"><font size="5" style="position:absolute;margin-left: 35px;top:450">{{limite}}</font><br>
          <font size="5" style="margin-left: 15px;"> Debito </font><br><br>
       </div>
       <div ng-show="menu.currentNavItem == 'Contrato'">
@@ -75,7 +75,7 @@
          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
             <md-card-title>
               <md-card-title-text>
-                <img src="card-payment.png"  style="left: 45; width: 70"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Limite de crédito</font>
+                <img src="IMAGENS/card-payment.png"  style="left: 45; width: 70"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Limite de crédito</font>
                 <font size="5" style="position:absolute;margin-left: 90px;margin-top: 40px; color: black">38%</font><br>
                  <font size="2" style="margin-left: 60px; color: black">Plano Platinum</font>
                  <font size="2" style="margin-left: 50px; color: black">Mês: novembro / 2017</font><br>
@@ -88,7 +88,7 @@
           <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" omd-theme-watch>
             <md-card-title>
               <md-card-title-text>
-                <img src="piggybank.png"  style="left: 45; width: 70"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Emprétimo</font>
+                <img src="IMAGENS/piggybank.png"  style="left: 45; width: 70"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Emprétimo</font>
                 <font size="2" style="position:absolute;margin-left: 90px;margin-top:16px; color: black">R$ 3068,00</font>
                 <font size="2" style="position:absolute;margin-left: 90px;margin-top:32px; color: black">11/07/2018</font>
               </md-card-title-text>
@@ -103,14 +103,14 @@
           <md-select ng-model="Cooperativo" placeholder="Cooperativo" class="md-no-underline" >
             <md-option ng-repeat="opcao in opcoesProdServ" value="opcao">{{opcao}}</md-option>
           </md-select>
-            <img src="filter-results-button.png"  style="left: 40; width: 40;margin-right: 10px;">
+            <img src="IMAGENS/filter-results-button.png"  style="left: 40; width: 40;margin-right: 10px;">
         </div>
         <br>
          <font size="5" style="margin-left: 15px;">
           <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
             <md-card-title>
                 <md-card-title-text>
-                  <img src="database.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Dataware House</font>
+                  <img src="IMAGENS/database.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Dataware House</font>
                   <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 50000</font>
                 </md-card-title-text>
               </md-card-title>
@@ -120,7 +120,7 @@
           <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
             <md-card-title>
                 <md-card-title-text>
-                  <img src="GCP.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Google Cloud</font>
+                  <img src="IMAGENS/GCP.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Google Cloud</font>
                   <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 129,00</font>
                 </md-card-title-text>
               </md-card-title>
@@ -130,7 +130,7 @@
           <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
             <md-card-title>
                 <md-card-title-text>
-                  <img src="api.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">API's e Serviços</font>
+                  <img src="IMAGENS/api.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">API's e Serviços</font>
                   <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 1200</font>
                 </md-card-title-text>
               </md-card-title>
@@ -140,7 +140,7 @@
           <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
             <md-card-title>
                 <md-card-title-text>
-                  <img src="backup.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Backup Diario</font>
+                  <img src="IMAGENS/backup.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Backup Diario</font>
                   <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 300,00</font>
                 </md-card-title-text>
               </md-card-title>
@@ -153,16 +153,16 @@
           md-selected-nav-item="currentNavItem"
           nav-bar-aria-label="navigation links">
             <md-nav-item md-nav-click="menu.goto('home')" name="home" >
-             <img src="ic_account_balance_white_24dp.png" style="width:25px;height:25px;">
+             <img src="IMAGENS/ic_account_balance_white_24dp.png" style="width:25px;height:25px;">
             </md-nav-item>
             <md-nav-item md-nav-click="menu.goto('Contrato')" name="Contrato" >
-              <img src="give-money.png" style="width:25px;height:25px;">
+              <img src="IMAGENS/give-money.png" style="width:25px;height:25px;">
             </md-nav-item>
             <md-nav-item md-nav-click="menu.goto('prodServ')" name="prodServ" >
-              <img src="ic_shopping_cart_white_24dp.png" style="width:25px;height:25px;">
+              <img src="IMAGENS/ic_shopping_cart_white_24dp.png" style="width:25px;height:25px;">
             </md-nav-item>
             <md-nav-item md-nav-click="menu.goto('financas')" name="financas" >
-              <img src="orig.png" style="width:25px;height:25px;">
+              <img src="IMAGENS/orig.png" style="width:25px;height:25px;">
             </md-nav-item>
         </md-nav-bar>
       </div>
