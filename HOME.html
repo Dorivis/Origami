@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+    <link rel="javascript" type="text/javascript" href="js.js">
+  </head>
+  <body ng-app="myApp" ng-cloak>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    
+    <script src="js.js"></script>
+    
+    <script type="text/javascript">    
+    
+      angular.module('BlankApp', ['ngMaterial']);
+    </script>
+    
+    <div ng-controller="MenuController as menu" ng-cloak >
+      <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools" style="background-color: #1BCF99; color: black;">
+          <img src="ic_help_white_2x.png"  style="position:absolute;width:25px;height:25px; right: 15;">
+           <font size="4" style="margin-left: 35%; color: white;" ng-show="menu.currentNavItem == 'Contrato'" >Contratos</font>
+           <font size="4" style="margin-left: 0; color: white" ng-show="menu.currentNavItem == 'financas'" >Finanças</font>
+           <font size="4" style="margin-left: 0; color: white" ng-show="menu.currentNavItem == 'prodServ'" >Produto e Serviço</font>
+          <span flex></span>
+        </div>
+      </md-toolbar>
+      <div ng-show="menu.currentNavItem == 'home'">
+        <br>
+          <img src="checklist.png"  style="left: 15;"><font size="5" style="position:absolute;margin-left: 15px;top:130">38%</font><br>
+         <font size="5" style="margin-left: 15px;">Contratos</font> <br><br><br>
+         <img src="strategy.png"  style="left: 45; width: 120"><font size="5" style="position:absolute;margin-left: 35px;top:300">70%</font><br>
+         <font size="5" style="margin-left: 15px;">Metas</font><br><br>
+         <img src="payment-method.png"  style="left: 45; width: 100"><font size="5" style="position:absolute;margin-left: 35px;top:450">{{limite}}</font><br>
+         <font size="5" style="margin-left: 15px;"> Debito </font><br><br>
+      </div>
+      <div ng-show="menu.currentNavItem == 'Contrato'">
+         <font size="5" style="margin-left: 15px; ">
+          <md-toolbar style="background-color: #1BCF99;">
+            <div  style="position:absolute; background-color: #1BCF99; color: black; top: 0px; width: 100%; height:90px;">
+              <font size="8" style="margin-left: 43%; color: white;  ">5 <i  class="material-icons" style="color: white; ">star_rate</i></font>
+              
+            </div>
+          </md-toolbar>
+         </font><br><br><br>
+         <font size="13" style="margin-left: 30px; color: #1BCF99">{{qtdClientes}}</font><font size="13" style="margin-left: 80px; color: #1BCF99">3</font><font size="13" style="margin-left: 80px; color: #1BCF99">118</font><br>
+         <font size="2" style="margin-left: 35px; color: black">Clientes</font><font size="2" style="margin-left: 30px; color: black">Vendas essa</font><font size="2" style="margin-left: 50px; color: black">Total de contratos</font> <br>
+         <font size="2" style="margin-left: 25px; color: black">Cadastrados</font><font size="2" style="margin-left: 30px; color: black">semana</font><font size="2" style="margin-left: 90px; color: black">fechados</font> <br>
+         <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">BR Startup</span>  <i ng-click="menu.popUpContratos('E-Commerce', 'Re-design', '10º dia útil', '4 parcelas de R$ 2000.00', 'BR STARTUP')" class="material-icons" style="position: absolute;rigth: 0px; left: 85%">keyboard_arrow_down</i>
+              </md-card-title-text>
+            </md-card-title>
+          </md-card>
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">Agasus</span><i class="material-icons" style="position: absolute;rigth: 0px; left: 85%">keyboard_arrow_down</i>
+              </md-card-title-text>
+            </md-card-title>
+          <md-card>
+      </div>
+      
+      <div ng-show="menu.currentNavItem == 'financas'">
+        <br>
+         <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+            <md-card-title>
+              <md-card-title-text>
+                <img src="card-payment.png"  style="left: 45; width: 70"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Limite de crédito</font>
+                <font size="5" style="position:absolute;margin-left: 90px;margin-top: 40px; color: black">38%</font><br>
+                 <font size="2" style="margin-left: 60px; color: black">Plano Platinum</font>
+                 <font size="2" style="margin-left: 50px; color: black">Mês: novembro / 2017</font><br>
+              </md-card-title-text>
+            </md-card-title>
+          </md-card>
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+           <center> <i class="material-icons" style="height:19">keyboard_arrow_down</i></center>
+          </md-card>
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" omd-theme-watch>
+            <md-card-title>
+              <md-card-title-text>
+                <img src="piggybank.png"  style="left: 45; width: 70"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Emprétimo</font>
+                <font size="2" style="position:absolute;margin-left: 90px;margin-top:16px; color: black">R$ 3068,00</font>
+                <font size="2" style="position:absolute;margin-left: 90px;margin-top:32px; color: black">11/07/2018</font>
+              </md-card-title-text>
+            </md-card-title>
+          </md-card>
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+           <center> <i class="material-icons" style="height:19">keyboard_arrow_down</i></center>
+          </md-card>
+      </div>
+      <div ng-show="menu.currentNavItem == 'prodServ'">
+        <div layout="row" layout-align="space-between center" style="height:15px;margin-top:13px;margin-bottom:5px;">
+          <md-select ng-model="Cooperativo" placeholder="Cooperativo" class="md-no-underline" >
+            <md-option ng-repeat="opcao in opcoesProdServ" value="opcao">{{opcao}}</md-option>
+          </md-select>
+            <img src="filter-results-button.png"  style="left: 40; width: 40;margin-right: 10px;">
+        </div>
+        <br>
+         <font size="5" style="margin-left: 15px;">
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
+            <md-card-title>
+                <md-card-title-text>
+                  <img src="database.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Dataware House</font>
+                  <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 50000</font>
+                </md-card-title-text>
+              </md-card-title>
+           </md-card>
+         </font>
+         <font size="5" style="margin-left: 15px;">
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
+            <md-card-title>
+                <md-card-title-text>
+                  <img src="GCP.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Google Cloud</font>
+                  <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 129,00</font>
+                </md-card-title-text>
+              </md-card-title>
+           </md-card>
+         </font>
+         <font size="5" style="margin-left: 15px;">
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
+            <md-card-title>
+                <md-card-title-text>
+                  <img src="api.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">API's e Serviços</font>
+                  <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 1200</font>
+                </md-card-title-text>
+              </md-card-title>
+           </md-card>
+         </font>
+         <font size="5" style="margin-left: 15px;">
+          <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>         
+            <md-card-title>
+                <md-card-title-text>
+                  <img src="backup.png"  style="left: 45; width: 40"> <font size="2" style="position:absolute;margin-left: 90px; color: black">Backup Diario</font>
+                  <font size="2" style="position:absolute;right: 20px; color: #1BCF99">R$ 300,00</font>
+                </md-card-title-text>
+              </md-card-title>
+           </md-card>
+         </font>
+      </div>
+      <div style="position: absolute; bottom: 0px; left: -15px; right: 0px;overflow:hidden; background-color: #1BCF99">
+        <md-nav-bar
+          md-no-ink-bar="disableInkBar"
+          md-selected-nav-item="currentNavItem"
+          nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-click="menu.goto('home')" name="home" >
+             <img src="ic_account_balance_white_24dp.png" style="width:25px;height:25px;">
+            </md-nav-item>
+            <md-nav-item md-nav-click="menu.goto('Contrato')" name="Contrato" >
+              <img src="give-money.png" style="width:25px;height:25px;">
+            </md-nav-item>
+            <md-nav-item md-nav-click="menu.goto('prodServ')" name="prodServ" >
+              <img src="ic_shopping_cart_white_24dp.png" style="width:25px;height:25px;">
+            </md-nav-item>
+            <md-nav-item md-nav-click="menu.goto('financas')" name="financas" >
+              <img src="orig.png" style="width:25px;height:25px;">
+            </md-nav-item>
+        </md-nav-bar>
+      </div>
+    </div>
+  </body>
+</html>
